@@ -1,11 +1,11 @@
-<h1>Listing ideas</h1>
+<h1>Paradise Project</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Picture</th>
+      <th>Upload Your Paradise</th>
+      <th></th>
+      <th></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,7 +15,7 @@
       <tr>
         <td><%= idea.name %></td>
         <td><%= idea.description %></td>
-        <td><%= image_tag idea.picture_url(:thumb) if idea.picture? %></td>
+        <td><%= image_tag(idea.picture_url(:thumb), class: "thumbnail") if idea.picture? %></td>
         <td><%= link_to 'Show', idea %></td>
         <td><%= link_to 'Edit', edit_idea_path(idea) %></td>
         <td><%= link_to 'Destroy', idea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Idea', new_idea_path %>
+<%= link_to 'here', new_idea_path %>
